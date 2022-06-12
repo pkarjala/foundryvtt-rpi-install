@@ -3,8 +3,8 @@
 # setup-foundry-vtt.sh
 # By Patrick Karjala
 # MIT License
-# This script will install all of the necessary components for running FoundryVTT,
-# as well as set up a user and service to run it at the system level.
+# This script will install all of the necessary components for running FoundryVTT as 
+# a dedicated server, as well as set up a user and service to run it at the system level.
 # If provided with a "foundryvtt.zip" file for installation, it will unpack it in the
 # created directory. 
 

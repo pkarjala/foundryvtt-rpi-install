@@ -1,6 +1,6 @@
-# Foundry VTT Rasberry Pi Install Script
+# Foundry VTT Dedicated Server Rasberry Pi Install Script
 
-This script sets up the FoundryVTT software [https://foundryvtt.com/](https://foundryvtt.com/) to run as a service
+This script sets up the FoundryVTT Dedicated Server software [https://foundryvtt.com/](https://foundryvtt.com/) to run as a service
 on a Raspberry Pi running the Raspberry Pi operating system.
 
 It has been tested on a Raspberry Pi 4 with 8 GB of RAM running the Raspberry Pi 'Bullseye' release.
