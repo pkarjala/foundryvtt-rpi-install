@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Description: Creates easy to use vaiable for printing shell text in common colors
+# Usage: echo -e "This is ${red}red text${coloroff} and this is ${blue}blue text${coloroff}."
+
+# Add color vaiables echo messages with colors (use 'echo -e' to escape the color sequences).
+# ANSI color coding is in this form: \033[01;38;5;160m
+# The ANSI sequence: {ESC}[{attr};{bg}{265colors};{fg}m
+# {ESC} or \033 represents the ANSI escape-sequence.
+# {attr} represents the outputs attributes (properies such as blinking and bold text).
+# {bg} is the background color.
+# {fg} is the foreground color.
+# m marks the end of the sequence.
+# See https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit for additional information.
+
+black='\033[0;30m'
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+white='\033[0;37m'
+coloroff='\033[0m'

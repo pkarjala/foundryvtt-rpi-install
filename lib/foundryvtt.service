@@ -1,0 +1,17 @@
+[Unit]
+Description=FoundryVTT Node.js Server
+After=network.target
+Wants=network.target
+StartLimitIntervalSec=0
+
+[Service]
+User=foundry
+Group=foundry
+Type=simple
+Restart=always
+RestartSec-=1
+WorkingDirectory=/opt/foundry/foundryvtt/resources/app
+ExecStart=/usr/bin/node main.js --dataPath=/opt/foundry/foundrydata
+
+[Install]
+WantedBy=multi-user.target
