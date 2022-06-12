@@ -2,9 +2,11 @@
 
 # setup-foundry-vtt.sh
 # By Patrick Karjala
-# This script will install all of the necessary components for running FoundryVTT.
-# If provided with a "foundryvtt.zip" file for installation, it will unpack and configure it,
+# MIT License
+# This script will install all of the necessary components for running FoundryVTT,
 # as well as set up a user and service to run it at the system level.
+# If provided with a "foundryvtt.zip" file for installation, it will unpack it in the
+# created directory. 
 
 # This script is based on instructions in the following:
 # https://foundryvtt.com/article/installation/
@@ -99,7 +101,6 @@ fi
 # Set up the service to run the server
 sudo cp ./lib/foundryvtt.service /etc/systemd/system/
 
-
 ##########
 
 # Setup necessary directories to install Foundry.
@@ -122,5 +123,7 @@ if [[ -n $INSTALL_FILE ]]; then
 	echo -e "FoundryVTT has been set up in ${yellow}/opt/foundry/${coloroff}"
 else
 	echo -e "You will need to now download the FoundryVTT install file and place it in ${yellow}/opt/foundry/foundryvtt/${coloroff}"
+	echo -e "Then, own the files by running ${yellow}sudo chown -R foundry: /opt/foundry/foundryvtt${coloroff}"
 fi
-echo -e "To run the server, type ${yellow}service foundryvtt start${coloroff}"
+echo -e "Start the server by running ${yellow}sudo service foundryvtt start${coloroff}"
+echo -e "Then to access your site, please visit your Raspberry Pi's IP address at port 30000."
