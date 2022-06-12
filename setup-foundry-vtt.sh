@@ -95,7 +95,7 @@ if id -u "foundry" >/dev/null 2>&1; then
 	echo -e "${cyan}[INFO]${coloroff} User foundry already exists; skipping."
 else
 	echo -e "${green}[OK]${coloroff} Setting up foundry user."
-	useradd -r -U -s /user/sbin/nologin foundry
+	sudo useradd -r -U -s /usr/sbin/nologin foundry
 fi 
 
 # Set up the service to run the server
@@ -112,8 +112,7 @@ fi
 # Check for FoundryVTT file and set up if present.
 if [[ -n $INSTALL_FILE ]]; then
 	echo -e "${green}[OK]${coloroff} Foundry VTT zip file present, copying and extracting to /opt/foundry/foundryvtt."
-	sudo cp $INSTALL_FILE /opt/foundry/foundryvtt/$INSTALL_FILE
-	sudo unzip /opt/foundry/foundryvtt/$INSTALL_FILE
+	sudo unzip -d /opt/foundry/foundryvtt/ $INSTALL_FILE
 	sudo chown -R foundry: /opt/foundry/foundryvtt /opt/foundry/foundrydata
 fi
 
