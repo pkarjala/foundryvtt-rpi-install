@@ -29,7 +29,7 @@ Please leave any feedback or bugs using the Issues tab on Github.  Pull requests
 
 This script installs and creates the following:
 
-1. Node.js LTS (16.x as of this writing)
+1. Node.js LTS (18.x as of this writing)
 2. A service script at `/etc/systemd/system/foundryvtt.service`
 3. The directory `/opt/foundry/` which contains the `foundryvtt` and `foundrydata` folders.
 4. A service user, `foundry`, which is used to run the server.
