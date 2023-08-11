@@ -82,8 +82,8 @@ echo -e "Preparing to install Node.js."
 if command -v node >/dev/null; then
 	echo -e "${cyan}[INFO]${coloroff} Node.js is already installed; skipping."
 else
-	echo -e "${green}[OK]${coloroff} Installing the current LTS version of Node.js"
-	curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+	echo -e "${green}[OK]${coloroff} Installing the current LTS version (18.x) of Node.js"
+	curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 	sudo apt-get install -y nodejs
 fi
 
