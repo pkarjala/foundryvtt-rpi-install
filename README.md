@@ -36,5 +36,6 @@ This script installs and creates the following:
 ## Version History
 
 0.2 - Change default NodeJS version from 18.x to 20.x
+
 0.1 - Initial Release
 
