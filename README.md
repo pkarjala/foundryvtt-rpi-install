@@ -24,7 +24,6 @@ For help, run `setup-foundry-vtt.sh --help`
 
 Please leave any feedback or bugs using the Issues tab on Github.  Pull requests are welcome for enhancements.
 
-
 ## Technical Explanation
 
 This script installs and creates the following:
@@ -33,3 +32,9 @@ This script installs and creates the following:
 2. A service script at `/etc/systemd/system/foundryvtt.service`
 3. The directory `/opt/foundry/` which contains the `foundryvtt` and `foundrydata` folders.
 4. A service user, `foundry`, which is used to run the server.
+
+## Version History
+
+0.2 - Change default NodeJS version from 18.x to 20.x
+0.1 - Initial Release
+
